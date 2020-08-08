@@ -1,12 +1,4 @@
 <h1>My Heroes</h1>
-<section *ngIf="selectedHero">
-  <h2>{{ selectedHero.name }}'s details</h2>
-  <div><span>Id: </span>{{ selectedHero.id }}</div>
-  <label
-    >Name:
-    <input [(ngModel)]="selectedHero.name" placeholder="name" />
-  </label>
-</section>
 
 <ul class="heroes">
   <li
@@ -17,3 +9,5 @@
     <span class="badge">{{ hero.id }}</span> {{ hero.name }}
   </li>
 </ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
